@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 import Alamofire
 
 class RequestFactory {
@@ -29,6 +28,11 @@ class RequestFactory {
     func makeAuthRequestFatory() -> AuthRequestFactory {
         let errorParser = makeErrorParser()
         return Auth(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    func makeGoodsFactory() -> GoodsRequesFactory {
+        let errorParser = makeErrorParser()
+        return Goods(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
 }
 
