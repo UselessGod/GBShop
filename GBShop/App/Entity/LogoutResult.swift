@@ -8,6 +8,6 @@
 import Foundation
 
 // MARK: - Logout
-struct Logout: Codable {
+struct LogoutResult: Codable {
     let result: Int
 }

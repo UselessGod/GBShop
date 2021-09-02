@@ -15,27 +15,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let requestFactory = RequestFactory()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        let auth = requestFactory.makeAuthRequestFatory()
-//            auth.login(userName: "Somebody", password: "mypassword") { response in
-//                switch response.result {
-//                case .success(let login):
-//                    print(login)
-//                case .failure(let error):
-//                    print(error.localizedDescription)
-//                }
-//            }
-//        return true
-        let goods = requestFactory.makeGoodsFactory()
-        goods.getGoodById(productId: 1){ response in
-            switch response.result {
-            case .success(let result):
-                print(result)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        
+        let auth = requestFactory.makeAuthRequestFatory()
+            auth.login(userName: "Somebody", password: "mypassword") { response in
+                switch response.result {
+                case .success(let login):
+                    print(login)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
         }
-        return true
+
+        auth.logout(userId: 1) { response in
+            switch response.result{
+            case .success(let logoutResponse):
+                print (logoutResponse)
+            case .failure(let error):
+                print (error)
+        }
+    
+    }
+    return true
+        
+        
+//        let goods = requestFactory.makeGoodsFactory()
+//        goods.getGoodById(productId: 1){ response in
+//            switch response.result {
+//            case .success(let result):
+//                print(result)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//
+//        }
     }
    
 

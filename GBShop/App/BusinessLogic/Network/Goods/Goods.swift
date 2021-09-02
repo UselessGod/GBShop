@@ -40,14 +40,14 @@ extension Goods: GoodsRequesFactory{
 extension Goods {
     struct CatalogData: RequestRouter {
         var baseUrl: URL
-        var method: HTTPMethod = .post
+        var method: HTTPMethod = .get
         var path: String = "list"
         var parameters: Parameters?
     }
     
     struct GoodById: RequestRouter {
         var baseUrl: URL
-        var method: HTTPMethod = .post
+        var method: HTTPMethod = .get
         var path: String = "product"
         
         let productId: Int
