@@ -41,14 +41,14 @@ extension Goods {
     struct CatalogData: RequestRouter {
         var baseUrl: URL
         var method: HTTPMethod = .get
-        var path: String = "list"
+        var path: String = "catalogData.json"
         var parameters: Parameters?
     }
     
     struct GoodById: RequestRouter {
         var baseUrl: URL
         var method: HTTPMethod = .get
-        var path: String = "product"
+        var path: String = "getBasket.json"
         
         let productId: Int
         var parameters: Parameters? {

@@ -25,7 +25,7 @@ struct ErrorParserStub: AbstractErrorParser {
 
 class AuthTest: XCTestCase {
 
-    let expectation = XCTestExpectation(description: "Download https://failUrl")
+    let expectation = XCTestExpectation(description: "AuthTest")
     var errorParser: ErrorParserStub!
     let sessionManager = Session(configuration: URLSessionConfiguration.default)
     var auth: Auth!

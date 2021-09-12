@@ -32,21 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             case .failure(let error):
                 print (error)
         }
-    
     }
+    
+    
     return true
-        
-        
-//        let goods = requestFactory.makeGoodsFactory()
-//        goods.getGoodById(productId: 1){ response in
-//            switch response.result {
-//            case .success(let result):
-//                print(result)
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//            }
-//
-//        }
+
     }
    
 
