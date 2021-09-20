@@ -12,7 +12,7 @@ class Reviews: AbstractRequestFactory {
     var errorParser: AbstractErrorParser
     var sessionManager: Session
     var queue: DispatchQueue
-    var baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+    var baseUrl = URL(string: "http://127.0.0.1:8080/review/")!
     
     init(
         errorParser: AbstractErrorParser,
